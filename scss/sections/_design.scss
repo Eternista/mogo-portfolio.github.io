@@ -1,0 +1,16 @@
+.design {
+    padding-top: 80px;
+    background-image: url("../image/Rectangle\ 21.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    div+img {
+        margin: 0 auto;
+        display: block;
+    }
+    img + img {
+        position: absolute;
+        bottom: -100px;
+        left: calc(50% + 100px);
+    }
+}

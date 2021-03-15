@@ -1,0 +1,73 @@
+.search {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0,0,0,.4);
+    width: 100vw;
+    height: 100vh;
+    z-index: 99;
+    display: none;
+    &.active {
+        display: block;
+    }
+    .far {
+        top: 30px;
+        right: 45px;
+        position: absolute;
+        z-index: 100;
+        font-size: 32px;
+        color: #fff;
+        cursor: pointer;
+    }
+    div {
+        position: absolute;
+        top: 200px;
+        width: 80%;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        justify-content: center;
+        input, button{
+            padding: 10px 15px;
+            background-color: transparent;
+            color: #fff;
+            i {
+                color: #fff;
+                transform: scaleX(-1);
+            }
+            border: 0;
+        }
+        input {
+            min-width: 300px;
+            border-bottom: 3px solid #fff;
+            font-size: 24px;
+            font-family: $Kaushan-Script;
+            border-radius: 30px;
+            transition: .3s;
+            &:hover {
+                animation: input 2s ease-in-out infinite;
+            }
+            &:focus {
+                background-color: rgba(255,255,255,.5);
+                animation: none;
+            }
+        }
+        button {
+            margin-left: -2px;
+            cursor: pointer;
+            padding: 20px;
+        }
+    }
+}
+
+@keyframes input {
+    0% {
+        background-color: rgba(255,255,255,0);
+    }
+    50% {
+        background-color: rgba(255,255,255,.5);
+    }
+    100% {
+        background-color: rgba(255,255,255,0);
+    }
+}

@@ -1,0 +1,29 @@
+//INC
+
+@import "inc/variables";
+@import "inc/fonts";
+@import "inc/mixns";
+@import "inc/basic";
+@import "inc/buttons";
+
+//LAYOUTS
+
+@import "layouts/footer";
+@import "layouts/header";
+@import "layouts/search";
+
+//SECTIONS
+
+@import "sections/main";
+@import "sections/about";
+@import "sections/counting";
+@import "sections/services";
+@import "sections/quote&users";
+@import "sections/design";
+@import "sections/what-we-do";
+@import "sections/our-team";
+@import "sections/logos";
+@import "sections/our-work";
+@import "sections/people";
+@import "sections/blog";
+@import "sections/map";

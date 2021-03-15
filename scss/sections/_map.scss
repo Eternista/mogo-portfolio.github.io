@@ -1,0 +1,113 @@
+.map { 
+    .map-context {
+        text-align: center;
+        background-image: url("../image/Rectangle\ 27.png");
+        background-size: cover;
+        background-repeat: no-repeat;
+        padding: 40px 0;
+        min-height: 180px;
+        transition: 3s ease-in-out;
+        transition-delay: 1.5s;
+        position: relative;
+        .context {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            cursor: pointer;
+            color: $color-secondary !important;
+            transition: color .3s ease-in-out;
+            i {
+                margin-bottom: 10px;
+                transition: color .3s ease-in-out;
+                color: $color-secondary !important;
+            }
+            .separate {
+                transition: .3s ease-in-out;
+                margin-top: 20px;
+                margin-bottom: 0;
+            }
+            .secondary {
+                font-size: 24px;
+            }
+            &:hover {
+                color: $color-primary !important;
+                i {
+                    color: $color-primary !important;
+                }
+                .separate {
+                    background-color: $color-primary;
+                }
+            }
+        }
+        // #map {
+        //     position: absolute;
+        //     max-width: 1100px;
+        //     height: 440px;
+        //     width: 1000px;
+        //     top: 50%;
+        //     left: 150%;
+        //     transform: translate(-50%, -50%);
+        //     transition: 2s ease-in-out;
+            // i {
+            //     color: $color-secondary;
+            //     top: 20px;
+            //     right: 10px;
+            //     transition: .3s ease-out;
+            //     position: absolute;
+            //     z-index: 99;
+            //     &:hover {
+            //         color: $color-primary;
+            //     }
+            // }
+        // }
+        &.active {
+            min-height: 600px;
+            transition: 2s ease-in-out;
+            transition-delay: 0s;
+            .context {
+                left: 150%;
+            }
+            // #map {
+            //     left: 50%;
+            //     transition: left 2s ease-in-out;
+            //     transition-delay: 1s;
+            // }
+        }
+        // @include tablet {
+        //     #map {
+        //         left: 300%;
+        //         max-width: 90vw;
+        //         width: 100%;
+        //     }
+        //     &.active {
+        //         #map {
+        //             left: 50%;
+        //         }
+        //     }
+        // }
+    }
+
+    #map {
+        height: 0;
+        // max-width: 1000px;
+        margin:  0 auto;
+        position: relative;
+        transition: height .3s linear;
+        canvas {
+            height: 100% !important;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 100% !important;
+        }
+    }
+    &.active #map{
+        height: 500px;
+    }
+    @include tablet {
+        &.active #map {
+            height: 300px;
+        }
+    }
+}

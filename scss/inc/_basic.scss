@@ -1,0 +1,48 @@
+//RESET
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    list-style: none;
+}
+
+//BASIC
+
+body {
+    width: 100%;
+}
+
+html, body {
+    overflow-x: hidden;
+    scrollbar-width: 20px;
+}
+
+
+//FLEX
+
+.flex {
+    display: flex;
+    &.row {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+//SEPARATE LINE
+
+.separate {
+    width: 80px;
+    height: 3px;
+    margin: 40px auto;
+    &.white {
+        background-color: #fff;
+    }
+    &.secondary {
+        background-color: $color-secondary;
+    }
+}
